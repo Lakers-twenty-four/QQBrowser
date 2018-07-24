@@ -23,7 +23,14 @@ $(function () {
             if (index == 2) {
                 $(".sec2TitleBox").addClass("sec2TitleBox_end_status");
                 setTimeout (function(){
+                    //移除过渡的属性
+                    $(".sec2TitleBox").css("transition","none");
+                    // 会有一个 bug 会闪一闪 
                     $(".sec2TitleBox").attr("class","sec2TitleBox sec2TitleBox_begin_status");
+                    //这样就偷偷告诉它了
+                    document.querySelector(".sec2TitleBox").offsetTop;
+                    //重新添加过渡的属性
+                    $(".sec2TitleBox").css("transition","transform .5s linear");
                 },800); 
             }
 
