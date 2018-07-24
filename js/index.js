@@ -5,7 +5,7 @@ $(function () {
         //是否显示导航
         navigation: true,
         //滚动速度，单位毫秒
-        scrollingSpeed: 500,
+        scrollingSpeed: 1000,
         //屏幕一离开 马上触发
         // index 从那个屏幕离开
         // nextIndex 要到哪个屏幕
@@ -38,6 +38,13 @@ $(function () {
                 $(".browserBox").addClass("browserBox_begin_status");
                 $(".title").addClass("title_begin_status");
             }
+
+            if (index == 4) {
+                $(".sec4Box").addClass("sec4Box_end_status");
+                setTimeout(function(){
+                    $(".sec4Box").attr("class","sec4Box sec4Box_begin_status");
+                },2000);
+            }
         },
         //屏幕加载完毕之后 触发
         /* 滚动到某一屏后的回调函数，
@@ -55,6 +62,10 @@ $(function () {
             if (index == 3) {
                 $(".browserBox").removeClass("browserBox_begin_status");
                 $(".title").removeClass("title_begin_status");
+            }
+
+            if (index == 4) {
+                $(".sec4Box").removeClass("sec4Box_begin_status");
             }
         }
     });

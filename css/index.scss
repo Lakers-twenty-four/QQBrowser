@@ -132,7 +132,7 @@ body {
 .section3 {
     position: relative;
     perspective: 1000px;
-    overflow: hidden;
+    // overflow: hidden;
     // transform: rotateX(30deg);
     .browserBox {
         position: absolute;
@@ -143,7 +143,7 @@ body {
         border:1px solid #000;
         background-color: #fff;
         transform: rotateX(30deg);  
-        transition: bottom 1s linear,right 1s linear;
+        transition: bottom .5s linear,right .5s linear;
     }
     .title {
         position: absolute;
@@ -154,18 +154,60 @@ body {
         transition: bottom 1s linear,left 1s linear;
     }
     .title_begin_status {
-        bottom : 0px;
-        left : 0px;
+        bottom : -400px;
+        left : -2000px;
     }
     .browserBox_begin_status {
-        bottom:-562px;
-        right: -820px;
+        bottom:-1000px;
+        right: -2000px;
     }
 }
 
 
 /* 第三屏部分代码结束 */
 
-/* 第一屏部分代码开始 */
-
-/* 第一屏部分代码结束 */
+/* 第四屏部分代码开始 */
+.section4 {
+    .sec4Box {
+        position: relative;
+        top : 50%;
+        left : 50%;
+        width: 630px;
+        height: 400px;
+        transform: translate(-50%,-50%);
+        transition: transform .5s linear;
+        perspective: 1000px;
+        img:nth-child(1) {
+            position: absolute;
+            top:0px;
+            left: 0px;  
+        }
+        img:nth-child(2) {
+            position: absolute;
+            top:216px;
+            left: 0;  
+        }
+        img:nth-child(3) {
+            position: absolute;
+            top:19px;
+            left: 12px;  
+        }
+        img:nth-child(4) {
+            position: absolute;
+            top:30px;
+            right: 12px;  
+        }
+        img:nth-child(5) {
+            position: absolute;
+            bottom:0;
+            left: 96px;  
+        }
+    }
+}
+.section4 .sec4Box_begin_status {
+    transform:translate(-999px,-400px) rotateZ(30deg);
+}
+.section4 .sec4Box_end_status {
+    transform:translate(-999px,200px) rotateZ(-30deg);
+}
+/* 第四屏部分代码结束 */

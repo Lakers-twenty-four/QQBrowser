@@ -171,7 +171,6 @@ body {
   position: relative;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  overflow: hidden;
 }
 
 .section3 .browserBox {
@@ -184,8 +183,8 @@ body {
   background-color: #fff;
   -webkit-transform: rotateX(30deg);
           transform: rotateX(30deg);
-  -webkit-transition: bottom 1s linear,right 1s linear;
-  transition: bottom 1s linear,right 1s linear;
+  -webkit-transition: bottom .5s linear,right .5s linear;
+  transition: bottom .5s linear,right .5s linear;
 }
 
 .section3 .title {
@@ -200,16 +199,72 @@ body {
 }
 
 .section3 .title_begin_status {
-  bottom: 0px;
-  left: 0px;
+  bottom: -400px;
+  left: -2000px;
 }
 
 .section3 .browserBox_begin_status {
-  bottom: -562px;
-  right: -820px;
+  bottom: -1000px;
+  right: -2000px;
 }
 
 /* 第三屏部分代码结束 */
-/* 第一屏部分代码开始 */
-/* 第一屏部分代码结束 */
+/* 第四屏部分代码开始 */
+.section4 .sec4Box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 630px;
+  height: 400px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear, -webkit-transform .5s linear;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.section4 .sec4Box img:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.section4 .sec4Box img:nth-child(2) {
+  position: absolute;
+  top: 216px;
+  left: 0;
+}
+
+.section4 .sec4Box img:nth-child(3) {
+  position: absolute;
+  top: 19px;
+  left: 12px;
+}
+
+.section4 .sec4Box img:nth-child(4) {
+  position: absolute;
+  top: 30px;
+  right: 12px;
+}
+
+.section4 .sec4Box img:nth-child(5) {
+  position: absolute;
+  bottom: 0;
+  left: 96px;
+}
+
+.section4 .sec4Box_begin_status {
+  -webkit-transform: translate(-999px, -400px) rotateZ(30deg);
+          transform: translate(-999px, -400px) rotateZ(30deg);
+}
+
+.section4 .sec4Box_end_status {
+  -webkit-transform: translate(-999px, 200px) rotateZ(-30deg);
+          transform: translate(-999px, 200px) rotateZ(-30deg);
+}
+
+/* 第四屏部分代码结束 */
 /*# sourceMappingURL=index.css.map */
